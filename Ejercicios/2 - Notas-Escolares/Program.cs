@@ -6,7 +6,7 @@ namespace Notas_Escolares
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
