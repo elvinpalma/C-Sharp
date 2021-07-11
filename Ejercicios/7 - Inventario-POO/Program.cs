@@ -1,18 +1,20 @@
 ﻿//Elvin Noé Palma Hernández 20192001535
 
+//Librería a utilizar
 using System;
 
-namespace inventtario
+namespace inventario
 {
     class Program
     {
-
 
         //Inicia el programa principal, donde se mostrará el menú principal del sistema de inventario
         static void Main(string[] args)
         {
             //Variables a utilizar
             string opcion = "";
+            
+            //Estancia necesaria 
             Inventario inventario = new Inventario();
 
             //Inicia ciclo while

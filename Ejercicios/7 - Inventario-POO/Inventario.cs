@@ -1,6 +1,10 @@
+//Elvin Noé Palma Hernández 20192001535
+
+//Librerías a utilizar
 using System;
 using System.Collections.Generic;
 
+//Clase Inventario
 public class Inventario
 {
      //Lista de productos que estan en el inventario 
@@ -8,10 +12,11 @@ public class Inventario
 
     public Inventario()
     {
+        //Estancia necesaria
         ListadeProductos = new List<Producto>();
 
         Producto a = new Producto("001", "iPhoneX", 0);  
-        Producto b = new Producto("002", "Laptop Dell", 5);  
+        Producto b = new Producto("002", "Dell", 5);  
         Producto c = new Producto("003", "Monitor Samsung", 2);  
         Producto d = new Producto("004", "Mouse", 100);  
         Producto e = new Producto("005", "HeadSet", 25);  
@@ -47,6 +52,7 @@ public class Inventario
     }
 
     //Función donde se hacen los calculos correspondientes con respecto a la cantidad de productos
+    //Es privada por que solo se utilizará en esta clase
     private void movimientoInventario(string codigo, int cantidad, string tipoMovimiento)
     {
         //Ciclo donde se están haciendo los diferentes movimientos en el inventario
