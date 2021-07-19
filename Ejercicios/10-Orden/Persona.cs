@@ -12,7 +12,7 @@ public class Persona
     public string Nombre { get; set; }
     public string Telefono { get; set; }
 
-    //Constructor de la clase para inicializar las propiedades
+    //Función de enviar notificación
     public void enviarNotificacion()
     {
         Console.WriteLine("Correo enviado a: " + Nombre);
