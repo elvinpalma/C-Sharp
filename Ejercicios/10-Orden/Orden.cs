@@ -1,0 +1,45 @@
+//Elvin Noé Palma Hernández 20192001535
+
+//Librerías a utilizar
+using System;
+using System.Collections.Generic;
+
+//Se inicia la clase orden
+public class Orden
+{
+    //Propiedades de la clase
+    public int Codigo { get; set; }
+    public DateTime Fecha { get; set; }
+    public string NumerodeOrden { get; set; }
+    public Cliente Cliente { get; set; }
+    public Vendedor Vendedor { get; set; }
+    public List<OrdenDetalle> ListaOrdenDetalle { get; set; }
+    public double Total { get; set; }
+    public double Impuesto { get; set; }
+    public double Subtotal { get; set; }
+
+    //Constructor de la clase para inicializar las propiedades
+    public Orden(int codigo, DateTime fecha, string numeroOrden, Cliente cliente, Vendedor vendedor)
+    {
+        Codigo = codigo;
+        Fecha = fecha;
+        NumerodeOrden = numeroOrden;
+        Cliente = cliente;
+        Vendedor = vendedor;
+        ListaOrdenDetalle = new List<OrdenDetalle>();
+    }
+
+    //Función para agregar productos
+    public void AgregarProducto(Producto producto)
+    {
+        int nuevoCodigo = ListaOrdenDetalle.Count + 1;
+        int cantidad = 1;
+
+        OrdenDetalle o = new OrdenDetalle(nuevoCodigo, 1, producto);
+        ListaOrdenDetalle.Add(o);
+
+        Subtotal += cantidad * producto.Precio;
+        Impuesto = Subtotal * 0.15;
+        Total = Subtotal + Impuesto;
+    }
+}
