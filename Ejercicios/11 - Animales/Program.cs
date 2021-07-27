@@ -180,6 +180,7 @@ namespace Animales
 
             Console.ReadLine();
 
+            //Comando para limpiar la pantalla
             Console.Clear();
         }
     }
